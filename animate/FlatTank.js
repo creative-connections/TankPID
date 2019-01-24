@@ -2007,7 +2007,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,184,215);
 	this.Flow2_anim = new lib.Proud1();
 	this.Flow2_anim.name = "Flow2_anim";
 	this.Flow2_anim.parent = this;
-	this.Flow2_anim.setTransform(1006.05,449.45,0.4121,0.4121,0,0,0,92,107.5);
+	this.Flow2_anim.setTransform(1048.3,493.35,0.9047,0.9047,0,0,0,92.2,107.6);
 
 	this.timeline.addTween(cjs.Tween.get(this.Flow2_anim).wait(100));
 
@@ -2262,17 +2262,29 @@ p.nominalBounds = new cjs.Rectangle(0,0,184,215);
 
 	this.timeline.addTween(cjs.Tween.get(this.Zkumavka).wait(100));
 
+	// Vrstva_2 (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	mask.graphics.p("AqeHWIAAurIU9AAIAAOrg");
+	mask.setTransform(1037.925,442.975);
+
 	// Proud2_obj_
 	this.Proud2 = new lib.FlatTank_Proud2();
 	this.Proud2.name = "Proud2";
 	this.Proud2.parent = this;
-	this.Proud2.setTransform(988.5,449.4,1,1,0,0,0,988.5,449.4);
+	this.Proud2.setTransform(1009.5,493.2,1,1,0,0,0,1009.5,493.2);
 	this.Proud2.depth = 0;
 	this.Proud2.isAttachedToCamera = 0
 	this.Proud2.isAttachedToMask = 0
 	this.Proud2.layerDepth = 0
 	this.Proud2.layerIndex = 14
 	this.Proud2.maskLayerName = 0
+
+	var maskedShapeInstanceList = [this.Proud2];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
 
 	this.timeline.addTween(cjs.Tween.get(this.Proud2).wait(100));
 
@@ -2291,7 +2303,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,184,215);
 	this.timeline.addTween(cjs.Tween.get(this.Proud1).wait(100));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(224.3,150.9,748.7,388.70000000000005);
+p.nominalBounds = new cjs.Rectangle(224.3,150.9,751.2,388.70000000000005);
 
 
 (lib.Scéna_1_FlatTank = function(mode,startPosition,loop) {
@@ -2344,7 +2356,7 @@ p.nominalBounds = new cjs.Rectangle(224.3,150.9,748.7,388.70000000000005);
 	this.FlatTank = new lib.Scéna_1_FlatTank();
 	this.FlatTank.name = "FlatTank";
 	this.FlatTank.parent = this;
-	this.FlatTank.setTransform(399.8,206,1,1,0,0,0,399.8,206);
+	this.FlatTank.setTransform(449.2,231.2,1,1,0,0,0,449.2,231.2);
 	this.FlatTank.depth = 0;
 	this.FlatTank.isAttachedToCamera = 0
 	this.FlatTank.isAttachedToMask = 0
@@ -2355,11 +2367,11 @@ p.nominalBounds = new cjs.Rectangle(224.3,150.9,748.7,388.70000000000005);
 	this.timeline.addTween(cjs.Tween.get(this.FlatTank).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(435.9,184.4,321.6,211.20000000000002);
+p.nominalBounds = new cjs.Rectangle(456.4,184.4,433.20000000000005,262.1);
 // library properties:
 lib.properties = {
 	id: '9F123846A008DF4FBDB587DDA4C380DD',
-	width: 854,
+	width: 895,
 	height: 355,
 	fps: 24,
 	color: "#444444",
