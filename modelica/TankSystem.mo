@@ -26,8 +26,8 @@ package TankSystem
       k = K_p,
       Ti = K_i,
       Td = K_d,
-      yMax = 1,
-      yMin = 0)
+      yMax=100.0,
+      yMin=1.0)
       annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 
 
@@ -38,9 +38,9 @@ package TankSystem
     der(h) = (qInflow - qOutflow)/area;   // Mass balance equation
     qOutflow = opening * areaOut * sqrt(2 * g * h);
 
-    PID.u_s = h;
-    PID.u_m = h_setpoint;
-    opening = PID.y;
+    PID.u_m = h;
+    PID.u_s = h_setpoint;
+    opening = 1/PID.y;
 
   annotation (
       experiment(
